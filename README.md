@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ree Defined Beauty</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
     body {
       margin: 0;
       padding: 0;
@@ -12,6 +17,7 @@
       font-family: 'Poppins', sans-serif;
       color: #4A3C3C;
       text-align: center;
+      overflow-x: hidden;
     }
 
     .container {
@@ -20,12 +26,15 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      animation: fadeIn 1.8s ease-out;
+      padding: 20px;
     }
 
     .logo {
       width: 250px;
       max-width: 80%;
       margin-bottom: 30px;
+      animation: zoomIn 2s ease-out;
     }
 
     h1 {
@@ -33,36 +42,101 @@
       color: #b37c7c;
       margin-bottom: 10px;
       letter-spacing: 2px;
+      animation: fadeInUp 1.5s ease-out;
     }
 
     p {
       font-size: 1.1rem;
       margin-bottom: 40px;
       color: #6f5a5a;
+      animation: fadeInUp 2s ease-out;
     }
 
     .btn {
       text-decoration: none;
       background-color: #b37c7c;
       color: white;
-      padding: 15px 30px;
+      padding: 15px 35px;
       border-radius: 30px;
       font-size: 1.1rem;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      animation: fadeInUp 2.5s ease-out;
     }
 
     .btn:hover {
       background-color: #a36f6f;
-      transform: scale(1.05);
+      transform: scale(1.08);
+      box-shadow: 0px 6px 15px rgba(179, 124, 124, 0.3);
     }
 
     footer {
       position: absolute;
-      bottom: 20px;
+      bottom: 15px;
       width: 100%;
       text-align: center;
       font-size: 0.9rem;
       color: #9c8a8a;
+      animation: fadeIn 3s ease-out;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        padding: 12px 28px;
+        font-size: 1rem;
+      }
+
+      .logo {
+        width: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .logo {
+        width: 180px;
+      }
     }
   </style>
 </head>
@@ -81,3 +155,7 @@
   </footer>
 </body>
 </html>
+
+
+
+
